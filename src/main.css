@@ -1,0 +1,106 @@
+/* ==========================
+   src/assets/tailwind.css
+   ========================== */
+
+/* 1. Import czcionki Montserrat z Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* 2. Baza Tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 3. Niestandardowe style linków */
+.nav-link {
+	@apply transition-colors duration-300;
+}
+
+.nav-link:hover,
+.nav-link:focus,
+.nav-link.active {
+	@apply text-[#ADDD00];
+}
+
+html {
+	scroll-behavior: smooth;
+	scroll-padding-top: 64px !important;
+}
+
+/* =========================================
+   4. Animacje (fadeIn + fadeInDelayed)
+   ========================================= */
+
+/* 1. Pojawienie się strzałki */
+@keyframes fadeInArrow {
+	0% {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* 2. Delikatny ruch góra-dół */
+@keyframes arrowUpDown {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(5px);
+	}
+}
+
+/* Klasa scalająca oba efekty w czasie */
+/* 
+	 - Najpierw (od 2.5s do 3.5s) wykonuje fadeInArrow (1s),
+	   potem (od 3.5s w górę) arrowUpDown w pętli infinite.
+  */
+.fadeInArrow {
+	opacity: 0;
+	/* 
+	  Składnia: 
+	  animation: <nazwa> <czas> <funkcja> [forwards/infinite] <opóźnienie>,
+				 <kolejna animacja> ... 
+	*/
+	animation: fadeInArrow 1s ease forwards 2.5s, arrowUpDown 1.5s ease-in-out 3.5s infinite;
+}
+
+/* 
+  Pozostałe klasy fadeIn i fadeInDelayed, jeśli już masz w kodzie:
+  */
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.fadeIn {
+	opacity: 0;
+	animation: fadeIn 1s ease forwards;
+	animation-delay: 0.5s;
+}
+
+@keyframes fadeInDelayed {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.fadeInDelayed {
+	opacity: 0;
+	animation: fadeInDelayed 1s ease forwards;
+	animation-delay: 1.5s;
+}
