@@ -1,5 +1,6 @@
+<!-- public/index.html -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 
 <head>
   <meta charset="UTF-8" />
@@ -7,6 +8,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>KOMUNALNIK</title>
   <base href="/KOMUNALNIK/" />
+  <!-- Dodaj skrypt Google reCAPTCHA z callbackiem -->
+  <script>
+    window.onRecaptchaLoad = function () {
+      console.log('reCAPTCHA script loaded')
+      window.dispatchEvent(new Event('recaptcha-loaded'))
+    }
+  </script>
+  <script src="https://www.google.com/recaptcha/api.js?onload=onRecaptchaLoad&render=explicit" async defer></script>
 </head>
 
 <body>

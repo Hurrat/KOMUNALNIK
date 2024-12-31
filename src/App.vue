@@ -1,10 +1,10 @@
 <!-- src/App.vue -->
 <template>
-	<div class="flex flex-col min-h-screen">
+	<div class="flex flex-col min-h-screen bg-[url('@/assets/tlo-harmonogramy.svg')] bg-cover bg-no-repeat bg-center">
 		<Header />
 
-		<!-- Sticky footer layout: main rośnie w pionie -->
-		<main class="grow bg-transparent">
+		<!-- Sticky footer layout -->
+		<main class="grow">
 			<router-view />
 		</main>
 
@@ -18,5 +18,5 @@ import Footer from '@/components/Footer.vue'
 </script>
 
 <style>
-/* Globalne style (opcjonalnie) */
+/* ewentualne globalne style */
 </style>

@@ -1,7 +1,6 @@
 <!-- src/views/Harmonogramy.vue -->
 <template>
-	<div
-		class="flex flex-col w-full h-full pt-24 bg-no-repeat bg-cover bg-center bg-[url('@/assets/tlo-harmonogramy.svg')]">
+	<div class="flex flex-col w-full h-full pt-36">
 		<h1 class="sr-only">Harmonogramy</h1>
 
 		<!-- Wyszukiwarka -->
@@ -58,11 +57,11 @@
 
 			<!-- Strzałki Glide -->
 			<div class="glide__arrows" data-glide-el="controls">
-				<button data-glide-dir="<" class="glide__arrow glide__arrow--left hover:text-primary-green transition-colors">
-					<i class="fa-solid fa-chevron-left text-2xl"></i>
+				<button data-glide-dir="<" class="glide__arrow glide__arrow--left hover:text-[#ADDD00] transition-colors">
+					<i class="fa-solid fa-chevron-left text-3xl"></i>
 				</button>
-				<button data-glide-dir=">" class="glide__arrow glide__arrow--right hover:text-primary-green transition-colors">
-					<i class="fa-solid fa-chevron-right text-2xl"></i>
+				<button data-glide-dir=">" class="glide__arrow glide__arrow--right hover:text-[#ADDD00] transition-colors">
+					<i class="fa-solid fa-chevron-right text-3xl"></i>
 				</button>
 			</div>
 		</div>
@@ -314,6 +313,7 @@ function onSearch() {
 	color: #00622e;
 	transition: color 0.3s;
 	padding: 0.5rem;
+	box-shadow: none;
 }
 .glide__arrow:hover {
 	color: #009e43;

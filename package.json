@@ -6,6 +6,7 @@
 	"homepage": "https://Hurrat.github.io/KOMUNALNIK",
 	"scripts": {
 		"dev": "vite",
+		"server": "node server.js",
 		"build": "vite build && node copy404.js",
 		"preview": "vite preview",
 		"deploy": "npx gh-pages -d dist"
@@ -13,10 +14,16 @@
 	"dependencies": {
 		"@fortawesome/fontawesome-free": "^6.7.2",
 		"@glidejs/glide": "^3.7.1",
+		"@unhead/vue": "^1.11.14",
 		"@vee-validate/rules": "^4.15.0",
+		"axios": "^1.7.9",
+		"body-parser": "^1.20.3",
+		"cors": "^2.8.5",
+		"express": "^4.21.2",
 		"vee-validate": "^4.15.0",
 		"vue": "^3.5.10",
 		"vue-router": "^4.5.0",
+		"vue-toastification": "^2.0.0-rc.5",
 		"vue3-carousel": "^0.12.0"
 	},
 	"devDependencies": {
